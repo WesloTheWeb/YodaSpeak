@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Background from '../src/components/Background/Background';
 import Footer from '../src/components/Footer/Footer';
+import UserInput from '../src/containers/UserInput/UserInput';
 import YodaSpeak from '../src/containers/YodaSpeak/YodaSpeak';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Background />
       <YodaSpeak />
+      <UserInput />
       <Footer />
     </div>
   )

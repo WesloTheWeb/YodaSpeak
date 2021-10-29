@@ -20,6 +20,12 @@
     border: none;
 }
 
+.inputContainer textarea:focus {
+    outline: none !important;
+    border: 1.5px solid springgreen;
+    box-shadow: 0 0 10px #719ECE;
+}
+
 .inputContainerButtons {
     display: flex;
     justify-content: center;

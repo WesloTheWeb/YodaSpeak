@@ -18,7 +18,14 @@ h1, h2, h3 {
 }
 
 h1 { 
+  color: #A9CC81;
   font-size: 4rem;
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 0;
 }
 
 a {
@@ -37,6 +44,7 @@ footer {
   padding: 2rem 0;
   width: 100%;
   height: 2.5rem; 
+  margin-top: 1.5rem;
 }
 
 @media only screen and (max-width: 1240px) {
@@ -81,12 +89,12 @@ footer {
 }
 
 .twinkling {
-  width: 200px;
+  width: 10000px;
   height: 100%;
   background: transparent
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
     repeat;
-  background-size: 340px 600px;
+  background-size: 1000px 1000px;
   position: absolute;
   right: 0;
   top: 0;

@@ -5,8 +5,16 @@
 
 .translationBox {
     border: 2px solid skyblue;
+    border-radius: 5px;
     color: #FFF;
     padding: 1.5rem;
     width: 50%;
-    margin: 3rem auto;
+    margin: 1.5rem auto;
+    font-size: 2rem;
 }
+
+@media screen and (max-width: 1023px) {
+    .translationBox {
+        width: 100%;
+    }
+  }

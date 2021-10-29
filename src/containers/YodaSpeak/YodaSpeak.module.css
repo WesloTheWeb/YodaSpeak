@@ -1,0 +1,12 @@
+.yodaContainer h2 {
+    text-align: center;
+    color: #FFF;
+}
+
+.translationBox {
+    border: 2px solid skyblue;
+    color: #FFF;
+    padding: 1.5rem;
+    width: 50%;
+    margin: 3rem auto;
+}

@@ -1,9 +1,15 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Background from '../src/components/Background/Background';
 import Footer from '../src/components/Footer/Footer';
+import UserInput from '../src/containers/UserInput/UserInput';
 import YodaSpeak from '../src/containers/YodaSpeak/YodaSpeak';
+import { QuoteContext } from '../src/contexts/QuoteContext';
 
 export default function Home() {
+
+  const [quote, setQuote] = useState(`Lost a planet,  master obiwan has.`)
+
   return (
     <div>
       <Head>
@@ -12,8 +18,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Background />
-      <YodaSpeak />
+      <QuoteContext.Provider value={{ quote, setQuote }}>
+        <YodaSpeak />
+        <UserInput />
+      </QuoteContext.Provider>
       <Footer />
     </div>
-  )
-}
+  );
+};

@@ -7,15 +7,22 @@ const { inputContainer, inputContainerButtons } = classes;
 
 const UserInput = (props) => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
     }
 
-    const { quote, setQuote } = useContext(QuoteContext);
+    const { setQuote } = useContext(QuoteContext);
 
-    const clearHandler = () => {
-        event.preventDefault();
+    const clearReactHookForm = (e) => {
+        e.preventDefault();
+        reset({
+            Message: ""
+        }, {
+            keepIsSubmitted: false,
+            keepIsValid: false,
+            keepSubmitCount: false,
+        });
         setQuote('');
     }
 
@@ -26,10 +33,16 @@ const UserInput = (props) => {
         <>
             <form className={inputContainer} onSubmit={handleSubmit(onSubmit)}>
                 <label>Type your message</label>
-                <textarea type="text" size="150" placeholder="I want to speak like you." {...register("Message")} />
+                <textarea
+                    type="text"
+                    size="150"
+                    defaultValue='Master Obiwan has lost a planet.'
+                    {...register("Message")}
+                />
                 <section className={inputContainerButtons}>
-                    <button type="submit">Translate</button>
-                    <button onClick={clearHandler}>Clear</button>
+                    <button type="submit"
+                    >Translate</button>
+                    <button onClick={clearReactHookForm}>Clear</button>
                 </section>
             </form>
         </>

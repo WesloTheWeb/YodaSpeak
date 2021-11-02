@@ -7,7 +7,7 @@ const { inputContainer, inputContainerButtons } = classes;
 
 const UserInput = (props) => {
 
-    const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
     }
@@ -28,7 +28,6 @@ const UserInput = (props) => {
 
     //TO-DO: Needs to send to API call
 
-    //TO-DO: Make onChange for text area form to the state. To clear, perhaps an object?
     return (
         <>
             <form className={inputContainer} onSubmit={handleSubmit(onSubmit)}>

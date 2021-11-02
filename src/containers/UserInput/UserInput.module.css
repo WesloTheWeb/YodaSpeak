@@ -8,6 +8,7 @@
 
 .inputContainer label {
     display: block;
+    font-size: 1.35rem;
     font-weight: bold;
     margin: .5rem 0;
 }
@@ -19,6 +20,8 @@
     margin: 0px;
     width: 100%;
     border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 .inputContainer textarea:focus {

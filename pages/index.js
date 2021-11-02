@@ -8,7 +8,7 @@ import { QuoteContext } from '../src/contexts/QuoteContext';
 
 export default function Home() {
 
-  const [quote, setQuote] = useState(`Lost a planet,  master obiwan has.`)
+  const [quote, setQuote] = useState(`Lost a planet,  Master Obiwan has.`)
 
   return (
     <div>

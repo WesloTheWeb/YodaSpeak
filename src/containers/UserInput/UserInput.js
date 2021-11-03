@@ -26,8 +26,6 @@ const UserInput = (props) => {
         setQuote('');
     }
 
-    //TO-DO: Needs to send to API call
-
     return (
         <>
             <form className={inputContainer} onSubmit={handleSubmit(onSubmit)}>

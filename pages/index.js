@@ -16,14 +16,12 @@ export default function Home() {
  useEffect(() => {
 
   const postTranslation = async () => {
-    const response = await fetch('https://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet');
-    const data = await response.json();
-    setQuote(data);
+    fetch('https://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet')
+    .then(response => response.json())
+    .then(data =>  setQuote(data));
+   
+    console.log('fired off!');
   };
-
-  return () => {
-    postTranslation();
-   }
  }, [])
 
 

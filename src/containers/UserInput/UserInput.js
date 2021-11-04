@@ -7,11 +7,7 @@ const { inputContainer, inputContainerButtons } = classes;
 
 const UserInput = (props) => {
 
-    const { register, handleSubmit, reset } = useInputForm();
-
-    const onSubmit = data => {
-        console.log(data);
-    }
+    const { register, onSubmit, reset } = useInputForm();
 
     const { setQuote } = useContext(QuoteContext);
 
@@ -29,7 +25,7 @@ const UserInput = (props) => {
 
     return (
         <>
-            <form className={inputContainer} onSubmit={handleSubmit(onSubmit)}>
+            <form className={inputContainer} onSubmit={onSubmit}>
                 <label>Type your message</label>
                 <textarea
                     type="text"
@@ -38,7 +34,7 @@ const UserInput = (props) => {
                     {...register("Message")}
                 />
                 <section className={inputContainerButtons}>
-                    <button 
+                    <button
                         type="submit"
                     >
                         Translate

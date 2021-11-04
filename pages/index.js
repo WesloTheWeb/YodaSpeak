@@ -13,16 +13,15 @@ export default function Home() {
   //TO-DO: Needs to send to API call
 
 
- useEffect(() => {
+//  useEffect(() => {
 
-  const postTranslation = async () => {
-    fetch('https://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet')
-    .then(response => response.json())
-    .then(data =>  setQuote(data));
+//  fetch('https://api.funtranslations.com/translate/yoda.json?text=Master%20Obiwan%20has%20lost%20a%20planet')
+//     .then(response => response.json())
+//     .then(json => setQuote(json));
    
-    console.log('fired off!');
-  };
- }, [])
+//     console.log('fired off!');
+//   };
+//  }, [])
 
 
 

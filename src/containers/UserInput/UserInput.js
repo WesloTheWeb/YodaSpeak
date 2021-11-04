@@ -37,8 +37,11 @@ const UserInput = (props) => {
                     {...register("Message")}
                 />
                 <section className={inputContainerButtons}>
-                    <button type="submit"
-                    >Translate</button>
+                    <button 
+                        type="submit"
+                    >
+                        Translate
+                    </button>
                     <button onClick={clearReactHookForm}>Clear</button>
                 </section>
             </form>

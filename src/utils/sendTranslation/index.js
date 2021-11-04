@@ -1,8 +1,12 @@
+import axios from "axios";
+// import _get from 'lodash/get';
 
+const translationURL = '/api/Translation';
 
 const sendTranslation = async (data) => {
-    let postRequest = new Request('https://api.funtranslations.com/translate/yoda.json');
+    const res = await axios.post(translationURL, data);
     console.log(data);
- }
+    return (res, 'data', {});
+};
 
 export default sendTranslation;

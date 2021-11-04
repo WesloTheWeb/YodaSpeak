@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
+import useInputForm from '../../hooks/useInputForm';
 import classes from './UserInput.module.css';
-import { useForm } from "react-hook-form";
 import { QuoteContext } from '../../contexts/QuoteContext';
 
 const { inputContainer, inputContainerButtons } = classes;
 
 const UserInput = (props) => {
 
-    const { register, handleSubmit, reset } = useForm();
+    const { register, handleSubmit, reset } = useInputForm();
+
     const onSubmit = data => {
         console.log(data);
     }

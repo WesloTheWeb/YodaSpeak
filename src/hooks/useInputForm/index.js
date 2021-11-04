@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import sendTranslation from "../../utils/sendTranslation";
 
 /**
  * Initialize Input Form
@@ -13,9 +14,8 @@ const useInputForm = () => {
         register,
         handleSubmit,
         reset,
-        onSubmit: handleSubmit()
+        onSubmit: handleSubmit(sendTranslation)
     }
-    
-}
+};
 
 export default useInputForm;
